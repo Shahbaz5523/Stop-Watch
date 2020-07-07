@@ -1,0 +1,26 @@
+:root{
+    --bg-color:#292930;
+    --text-color:#ffffff;
+    --start-button:#3EB650;
+    --pause-button:#FCC133;
+    --rest-button:#E12B38;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    text-align: center;
+    color: var(--text-color);
+    font-family: 'Galada', cursive;
+    background-color: var(--bg-color);
+}
+h1{
+    margin: 50px;
+    font-size: 4rem;
+    cursor: default;
+}
+p{
+    font-size: 2rem;
+}
