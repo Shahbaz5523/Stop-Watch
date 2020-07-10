@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Stop Watch</title>
@@ -7,12 +8,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Galada&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    
+
     <div>
         <h1>Stop Watch</h1>
     </div>
-    <p>0 1 2 3 4 5 6 7 8 9 0</p>
+
+    <div class="stopWatch">
+
+        <div class="timerContainer">
+            <p>
+                <span class="min">00</span> <span>m</span>
+
+                <span class="sec">00</span> <span>s</span>
+            
+                <span class="msec" style="width: 50px;">000</span> <span>ms</span>
+            </p>
+        </div>
+
+        <div class="btnContanier">
+            <button id="startBtn">Start</button>
+            <button id="pauseBtn">Pause</button>
+            <button id="resetBtn">Reset</button>
+        </div>
+
+        <div style="position: relative;" class="history">
+            <hr style="width: 300px; margin-bottom: 60px;">
+            <button onclick="clearAll()" style="position: absolute; width: 294px; top: 5px; right: 0px;">Clear Records</button>
+            <div class="historyBox"></div>
+        </div>
+
+    </div>
+
     <script src="app.js"></script>
 </body>
+
 </html>

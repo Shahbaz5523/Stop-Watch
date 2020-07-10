@@ -3,7 +3,7 @@
     --text-color:#ffffff;
     --start-button:#3EB650;
     --pause-button:#FCC133;
-    --rest-button:#E12B38;
+    --reset-button:#E12B38;
 }
 *{
     margin: 0;
@@ -17,10 +17,134 @@ body{
     background-color: var(--bg-color);
 }
 h1{
-    margin: 50px;
+    margin: 30px;
     font-size: 4rem;
     cursor: default;
 }
+.stopWatch{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.timerContainer{
+    display: flex;
+    margin: 0 auto;
+    min-width: 300px;
+}
 p{
+
+    margin: 0 auto;
     font-size: 2rem;
+    text-align: center;
+}
+.min , .sec , .msec{
+    margin: 0px;
+    width: 30px;
+    font-size: inherit;
+} 
+p span{
+    font-size: 1.3rem;
+    margin-right: 10px;
+    display: inline-block;
+}
+p span:last-child{
+    margin: 0;
+}
+.btnContanier{
+    margin: 10px;
+}
+button{
+    margin: 3px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: large;
+    padding: 7px 25px;
+    box-shadow: 0px 0px 10px 0px #2222;
+    transition: transform 0.2s ease-in-out;
+}
+p button{
+    width: 30px;
+    height: 30px;
+    padding: 0px;
+    border-radius: 50%;
+    vertical-align: middle;
+    color: var(--text-color);
+    background-color: var(--reset-button);
+}
+button:hover{
+    opacity: 0.8;
+}
+button:focus{
+    transform: scale(0.95);
+}
+.btnContanier button:first-child{
+    background-color: var(--start-button);
+}
+.btnContanier button:nth-child(2){
+    background-color: var(--pause-button);
+}
+.btnContanier button:last-child{
+    background-color: var(--reset-button);
+}
+.historyText{
+    color: #ccc;
+    font-size: 1.5rem;
+}
+.historyText span{
+    font-size: small;
+}
+.historyText b{
+    color: var(--text-color);
+}
+.removed{
+    color: rgba(175, 174, 174, 0.356);
+    text-decoration: line-through;
+}
+.removed b{
+    color: rgba(175, 174, 174, 0.356);
+}
+@media only screen and (max-width: 359px) {
+    h1{
+        font-size: 3rem;
+    }
+}
+@media only screen and (max-width: 303px) {
+    .history>hr{
+        width: 250px !important;
+    }
+    .history>button{
+        width: 243px !important;
+    }
+    .btnContanier button{
+        padding: 5px 15px;
+    }
+}
+@media only screen and (max-width: 282px) {
+    h1{
+        font-size: 2.5rem;
+    }
+    .history>hr{
+        width: 200px !important;
+    }
+    .history>button{
+        width: 193px !important;
+    }
+    .btnContanier button{
+        padding: 5px 10px;
+    }
+    .timerContainer p{
+        font-size: 1.3rem;
+    }
+    .min , .sec , .msec{
+        font-size: inherit;
+    } 
+    p span{
+        font-size: 1rem;
+        margin-right: 10px;
+        display: inline-block;
+    }
 }
